@@ -1,0 +1,349 @@
+<div class="ui container">
+
+	<br><br>
+	<div class="ui stackable two column grid"> <!-- search input -->
+		<div class="thirteen wide column">
+			<br>
+			<entry></entry>
+		</div>
+		<div class="three wide column">
+			<img class="ui small centered image" src="../images/logo.png" alt="">
+		</div>
+	</div>
+	<!-- ..........................Basket Shop Page.......................... -->
+	<br><br>
+	<div class="ui grid"> <!-- Breadcrumb -->
+		<div class="column">
+			<div class="ui big breadcrumb addressing">
+				<a class="section">فروشگاه اینترنتی لوگو</a>
+				<i class="left angle icon divider"></i>	
+				<div class="active section">سبد خرید</div>	  	
+			</div>	
+		</div>
+	</div><!-- /Breadcrumb -->
+	<!--......shop steps......-->
+	<div class="ui raised segment sgm-shop"><!-- basket shop segment -->
+		<div class="ui three top attached steps step-shop"><!-- title step -->
+			<div class="step">
+				<i class="shopping basket icon"></i>
+				<div class="content">
+					<div class="title">انتخاب محصول</div>
+					<div class="description">تایید کالای مورد نظر</div>
+				</div>
+			</div>
+			<div class="active step">
+				<i class="truck icon"></i>
+				<div class="content">
+					<div class="title">ارسال</div>
+					<div class="description">تکمیل فرم جهت ارسال کالا یا ورود بعنوان کاربر</div>
+				</div>
+			</div>
+			<div class="disabled step">
+				<i class="payment icon"></i>
+				<div class="content">
+					<div class="title">پرداخت</div>
+					<div class="description">انتخاب شیوه پرداخت</div>
+				</div>
+			</div>
+		</div><!-- /title step -->
+		<!--......attached segment (step)......-->
+		<div class="ui attached segment step-attach-shop"><!-- steps body -->
+			
+			<div><!-- step-one -->
+				<div ng-show="true"><!-- full basket -->
+					<table class="ui fixed table basket-table">
+						<thead>
+							<tr>
+								<th class="ui seven wide column center aligned item-product">محصول </th><!-- product -->
+								<th class="ui three wide column center aligned item-price">قیمت واحد</th><!-- price-1 -->
+								<th class="ui two wide column center aligned quantity">تعداد</th><!-- number -->
+								<th class="ui three wide column center aligned item-price">قیمت کل</th><!-- price-* -->
+								<th class="ui one wide column center aligned remove"></th><!-- delete -->
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td style="padding: 0px 3% 0px 1%;"><!-- product -->
+							        <h4 class="ui image header"><!-- product -->
+							          <img src="../images/kala1.jpg" class="ui small image">
+							          <div class="content">
+							            نام کالا
+							            <div class="sub header">توضیحات توضیحات توضیحات توضیحات توضیحات
+							          </div>
+							        </div>
+							      </h4>
+							    </td>
+								<td class="center aligned td-item-price"><!-- price-1 -->
+									<span>12000</span> تومان 
+								</td>
+								<td class="center aligned"><!-- count -->
+									<div class="ui form">
+										<div class="field">
+											<input class="count-prdct" type="text" placeholder="1">
+										</div>
+									</div>
+								</td>
+								<td class="center aligned td-total-price"><!-- price-* -->
+									<span>24000</span> تومان 
+								</td>
+								<td class="center aligned"><!-- delete -->
+									<i class="remove icon"></i>
+								</td>
+							</tr>
+							<tr>
+								<td style="padding: 0px 3% 0px 1%;"><!-- product -->
+							        <h4 class="ui image header"><!-- product -->
+							          <img src="../images/kala1.jpg" class="ui small image">
+							          <div class="content">
+							            نام کالا
+							            <div class="sub header">توضیحات توضیحات توضیحات
+							          </div>
+							        </div>
+							      </h4>
+							    </td>
+								<td class="center aligned td-item-price"><!-- price-1 -->
+									<span>12000</span> تومان 
+								</td>
+								<td class="center aligned"><!-- count -->
+									<div class="ui form">
+										<div class="field">
+											<input class="count-prdct" type="text" placeholder="1">
+										</div>
+									</div>
+								</td>
+								<td class="center aligned td-total-price"><!-- price-* -->
+									<span>24000</span> تومان 
+								</td>
+								<td class="center aligned"><!-- delete -->
+									<i class="remove icon"></i>
+								</td>
+							</tr>
+							<tr>
+								<td style="padding: 0px 3% 0px 1%;"><!-- product -->
+							        <h4 class="ui image header"><!-- product -->
+							          <img src="../images/kala1.jpg" class="ui small image">
+							          <div class="content">
+							            نام کالا
+							            <div class="sub header">توضیحات
+							          </div>
+							        </div>
+							      </h4>
+							    </td>
+								<td class="center aligned td-item-price"><!-- price-1 -->
+									<span>12000</span> تومان 
+								</td>
+								<td class="center aligned"><!-- count -->
+									<div class="ui form">
+										<div class="field">
+											<input class="count-prdct" type="text" placeholder="1">
+										</div>
+									</div>
+								</td>
+								<td class="center aligned td-total-price"><!-- price-* -->
+									<span>24000</span> تومان 
+								</td>
+								<td class="center aligned"><!-- delete -->
+									<i class="remove icon"></i>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="ui center aligned column row grid"><!-- total price -->
+						<div class="ui column total-price">جمع کل خرید شما: 250000 تومان</div>
+					</div>
+					<div class="ui stackable two column grid"><!-- back & forward btn -->
+						<div class="left aligned eight wide column">
+							<button class="ui large labeled icon button btn-back">
+							  <i class="chevron right icon"></i>
+							  بازگشت به صفحه اصلی
+							</button>					
+						</div>
+						<div class="right aligned eight wide column">
+							<button class="ui large right labeled icon button btn-next">
+							  <i class="chevron left icon"></i>
+							  تایید و مرحله بعد
+							</button>
+						</div>
+					</div>
+				</div><!-- /full basket -->
+				<div ng-show="true"><!-- empty basket -->
+					<div class="ui center aligned grid empty-basket">
+						سبد خرید شما خالی است <i class="warning sign icon"></i>
+					</div>
+					<div class="ui stackable two column grid"><!-- back & forward btn -->
+						<div class="left aligned eight wide column">
+							<button class="ui large labeled icon button btn-back">
+							  <i class="chevron right icon"></i>
+							  بازگشت به صفحه اصلی
+							</button>					
+						</div>
+						<div class="right aligned eight wide column">
+							<button class="ui large right labeled icon disabled button btn-next">
+							  <i class="chevron left icon"></i>
+							  تایید و مرحله بعد
+							</button>
+						</div>
+					</div>
+				</div><!-- /empty basket -->
+			</div><!-- /step-one -->
+
+			<div><!-- step-two -->
+				<div ng-show="true"><!-- enter user or guest user -->
+					<div class="ui center aligned column grid t-enter">ورود به سایت</div>
+					<div class="ui stackable three column grid"><!-- enter user -->
+						<div class="seven wide column"><!-- user -->
+							<div style="text-align: center;padding-bottom: 10px;"><i class="large blue user icon"></i></div>
+							<div class="t-u-enter">وارد شوید</div>
+							<div class="u-g">
+								<div class="u-text">اگر عضو سایت هستید برای تکمیل خرید وارد شوید</div>
+								<div class="ui form step-enter"><!-- form -->
+									<div class="inline field ">
+										<label>نام کاربری</label>
+										<input type="text" placeholder="">
+									</div>
+									<div class="inline field">
+										<label style="padding-left: 29px">رمز عبور</label>
+										<input type="password" placeholder="">
+									</div>
+									<div style="text-align: center;"><a href="">رمز عبور خود را فراموش کرده اید؟</a></div>
+									<br>
+									<div style="text-align: center;">
+										<button class="ui button ent-btn" type="submit">ورود</button>
+									</div>	
+								</div><!-- /form -->
+							</div>			
+						</div><!-- /user -->
+						<div class="two wide column" style="margin-bottom: 5%;"><!-- divider -->
+							<div class="ui vertical divider">
+								<i class="exchange icon"></i>
+							</div>
+						</div><!-- /divider -->
+						<div class="seven wide column"><!-- guest user -->
+							<div style="text-align: center;padding-bottom: 10px;"><i class="large blue add user icon"></i></div>
+							<div class="t-u-enter">مشتریان جدید یا مهمان</div>
+							<div class="u-g">
+								<div class="u-text">اگر نخستین بار خرید میکنید یا حساب کاربری ندارید, میتوانید ثبت نام کنید یا به عنوان مهمان خرید کنید</div>
+								<div class="u-text">برای ثبت نام <a ui-sref="app.register">اینجا</a> کلیک کنید</div>
+								<div class="u-text">به عنوان مهمان وارد شوید:</div>
+								<div class="ui form step-enter"><!-- form -->
+									<div class="inline field">
+										<label>ایمیل</label>
+										<input type="email" placeholder="">
+									</div>
+									<div style="text-align: center;">
+										<button class="ui button ent-btn" type="submit">ورود</button>
+									</div>	
+								</div><!-- /form -->
+							</div>	
+						</div><!-- /guest user -->
+					</div><!-- /enter user -->
+					<div class="ui stackable two column grid"><!-- back & forward btn -->
+						<div class="left aligned eight wide column">
+							<button class="ui large labeled icon button btn-back">
+								<i class="chevron right icon"></i>
+								بازگشت به انتخاب محصول
+							</button>					
+						</div>
+						<div class="right aligned eight wide column">
+							<button class="ui large right labeled icon disabled button btn-next">
+								<i class="chevron left icon"></i>
+								تایید و مرحله بعد
+							</button>
+						</div>
+					</div>
+				</div><!-- /enter user or guest user -->
+				<div ng-show="true"><!-- post address -->
+					<div class="pst-name">نام کاربر</div>
+					<div class="ui form pst-form"><!-- form -->
+						<div class="three fields">
+							<div class="field">
+								<label class="pst-lable">تحویل گیرنده </label>
+								<input type="text" maxlength="30" placeholder="نام تحویل گیرنده ">
+							</div>
+							<div class="required field">
+								<label class="pst-lable">تلفن همراه </label>
+								<input type="text" maxlength="11" placeholder=" ...09 ">
+							</div>
+							<div class="field">
+								<label class="pst-lable">تلفن ثابت </label>
+								<input type="text" maxlength="11" placeholder="">
+							</div>
+						</div>	
+						<div class="two fields">		    	
+							<div class="required eleven wide field">
+								<label class="pst-lable">آدرس محل تحویل </label>
+								<input type="text" placeholder=" مثال: میدان امام- خیابان جام جم- کوچه فرهنگ- آپارتمان جاوید- پلاک 2- واحد 5">
+							</div> 
+							<div class="required five wide field">
+								<label class="pst-lable">کد پستی </label>
+								<input type="text" placeholder="">
+							</div> 
+						</div>   	
+					</div><!-- /form -->
+					<div class="ui stackable two column grid"><!-- back & forward btn -->
+						<div class="left aligned eight wide column">
+							<button class="ui large labeled icon button btn-back">
+								<i class="chevron right icon"></i>
+								بازگشت به انتخاب محصول
+							</button>					
+						</div>
+						<div class="right aligned eight wide column">
+							<button class="ui large right labeled icon button btn-next">
+								<i class="chevron left icon"></i>
+								تایید و مرحله بعد
+							</button>
+						</div>
+					</div>
+				</div><!-- /post address -->
+			</div><!-- /step-two -->
+
+			<div><!-- step-three -->
+				<div ng-show="true">
+					<div class="ui stackable two column grid">
+						<div class="nine wide column">
+							<div class="field pay-box">
+						      	<label>انتخاب درگاه اینترنتی </label>
+						      	<select class="ui dropdown" id="select-bank">
+								    <option value="parsian">پارسیان</option>
+								    <option value="pasargad">پاسارگاد</option>
+								    <option value="mellat">ملت</option>
+								    <option value="meli">ملی</option>
+						      	</select>
+				    		</div>
+				    		<div class="pay-box">پرداخت با کلیه کارت های بانکی عضو شتاب امکان پذیر است</div>
+						</div>
+						<div class="seven wide column">
+							<div class="pay-box">
+								<ul>
+									<li></i><span class="b-item">جمع خرید :</span><span>{29000 تومان}</span></li>
+									<li><span class="b-item">نام تحویل گیرنده :</span><span>{نام تحویل گیرنده}</span></li>
+									<li><span class="b-item">شماره تلفن :</span><span>{شماره تلفن}</span></li>
+									<li><span class="b-item">آدرس :</span><span>{آدرس}</span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="ui stackable two column grid"><!-- back & forward btn -->
+						<div class="left aligned eight wide column">
+							<button class="ui large labeled icon button btn-back">
+							  <i class="chevron right icon"></i>
+							  بازگشت به ارسال
+							</button>					
+						</div>
+						<div class="right aligned eight wide column">
+							<button class="ui large right labeled icon button btn-next">
+							  <i class="chevron left icon"></i>
+							  پرداخت
+							</button>
+						</div>
+					</div>
+				</div>
+			</div><!-- /step-three -->
+
+		</div><!-- /steps body -->
+	</div><!-- /basket shop segment -->
+
+
+
+
+</div><!-- container -->

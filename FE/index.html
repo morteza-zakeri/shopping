@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Shopping</title>
+
+    <link rel="stylesheet" href="css/semantic.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+</head>
+<body ng-controller="MainCtrl">
+<div class="ui container">
+    <!--.............Menu.............-->
+    <div class="ui stackable massive secondary pointing menu menu-border">
+
+        <a id="logo" ui-sref="app.home">
+            <img class="ui tiny image" src="../images/logo.png" alt="logo">
+        </a>
+
+        <a class=" item menu-show"
+           ng-click="selectMenu($index)"
+           ng-class=" {active :selectedMenu==$index}"
+           ui-sref="{{menu.link}}" ng-repeat="menu in menus">
+            {{menu.title}}
+        </a>
+
+        <!--------------------------  ACCOUNT PART ------------------------------------->
+        <div
+                ng-show="true"
+                class="right menu">
+            <div class="ui normal item menu-show dropdown">
+                <i class="user icon"></i> حساب کاربری <i class="angle down icon"></i>
+                <div class="menu acount-menu">
+                    <form class="ui mini form enter-menu">
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="user icon"></i>
+                                <input type="text" placeholder=" نام کاربری ">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="lock icon"></i>
+                                <input type="password" placeholder="رمز عبور">
+                            </div>
+                        </div>
+                        <div class="ui fluid button login" tabindex="0">ورود</div>
+                    </form>
+                    <a class="item forget-acount">بازیابی رمز عبور</a>
+                    <div class="ui divider"></div>
+                    <a class="item" ui-sref="app.register">ثبت نام</a>
+                </div>
+            </div>
+        </div>
+        <!--------------------------  RIGHT MENU ------------------------------------->
+        <!--<div class="right menu"-->
+             <!--ng-show="false">-->
+            <!--<a class="item menu-show" style="border: none;" ui-sref="app.useracount">-->
+                    <!--<span data-tooltip="نمایش پروفایل"-->
+                          <!--data-position="bottom center">-->
+                        <!--'نام کاربر' خوش آمدید</span>-->
+            <!--</a>-->
+            <!--<a class="item menu-show" style="border: none;">-->
+                    <!--<span data-tooltip="خروج"-->
+                          <!--data-position="bottom center">-->
+                        <!--<i class="horizontally flipped large sign out link icon"></i>-->
+                    <!--</span>-->
+            <!--</a>-->
+        <!--</div>-->
+    </div>
+</div>
+
+<div ui-view></div>
+
+<!--.............footer.............-->
+<div custom-footer></div>
+
+
+<!--LIBRARIES-->
+<script src="libs/jquery.min.js"></script>
+<script src="libs/semantic.min.js"></script>
+<script src="libs/angular.min.js"></script>
+<script src="libs/angular-ui-router.min.js"></script>
+<script src="libs/angular-resource.min.js"></script>
+
+<!--APPLICATION-->
+<script src="app/app.js"></script>
+<script src="app/config.route.js"></script>
+<script src="app/config.directive.js"></script>
+<script src="app/product/product.js"></script>
+<script src="app/product-detail/product-detail.js"></script>
+
+
+<script>
+    $('.ui.dropdown').dropdown();
+</script>
+
+</body>
+</html>

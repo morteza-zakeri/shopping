@@ -1,0 +1,107 @@
+<div class="ui container">
+
+    <br><br>
+    <div class="ui stackable two column grid"> <!-- search input -->
+        <div class="thirteen wide column">
+            <br>
+            <entry></entry>
+        </div>
+        <div class="three wide column">
+            <img class="ui small centered image" src="../images/logo.png" alt="">
+        </div>
+    </div>
+
+    <!-- ..........................Product Detail Page.......................... -->
+    <br><br>
+    <div class="ui grid">  <!-- Breadcrumb -->
+        <div class="column">
+            <div class="ui big breadcrumb addressing">
+                <a class="section">فروشگاه اینترنتی لوگو</a>
+                <i class="left angle icon divider"></i>
+                <a class="section">محصولات</a>
+                <i class="left angle icon divider"></i>
+                <a class="section">گروه یک</a>
+                <i class="left angle icon divider"></i>
+                <a class="section">دسته یک</a>
+                <i class="left angle icon divider"></i>
+                <div class="active section">کالای یک</div>
+            </div>
+        </div>
+    </div><!-- /Breadcrumb -->
+    <div class="ui raised segment sgm-detail"><!-- product detail segment -->
+        <div class="ui red ribbon label p-offer" style="width: 10%">پیشنهاد ویژه
+        </div>
+        <div class="ui stackable three column grid"><!-- main -->
+
+            <div class="ui center aligned six wide column"><!-- image -->
+                <div class="read-rating"><!-- stars-->
+                    <div class="ui star rating" data-rating="5"></div>
+                </div>
+                <img class="ui image" src="../images/kala01.jpg" alt="image">
+            </div><!-- /image -->
+
+            <div class="left aligned five wide column top-detail"><!-- detail -->
+                <br>
+                <h1 class="name-product">{{product.title}}</h1>
+                <h2 class="comment-product">{{product.comment}}</h2><br>
+                <p class="detail">
+                    <span>تولید کننده :</span><span class="distance">{{product.producer}}</span><br>
+                    <span>وضعیت :</span>
+                    <span class="distance" ng-if="product.available==1">موجود می باشد</span>
+                    <span class="distance" ng-if="product.available==0">موجود نمی باشد</span>
+                    <br>
+                    <span style="text-decoration: line-through;">
+						<span>قیمت :</span><span class="distance">{{product.price | currency:'rial':0}}</span>
+					</span><br>
+                    <span>قیمت :</span><span class="distance">{{product.price - product.discount_price}}</span>
+                </p>
+            </div><!-- /detail-->
+
+            <div class="center aligned five wide column btn-detail" style="padding-bottom: 20px;"><!-- buttons-->
+
+                <button class="ui button btn-shop2"><i class="big add to cart icon"></i>افزودن به سبد خرید</button>
+                <br><br><!-- stars-->
+                <div class="ui star rating" data-rating="{{product.score_id}}"></div>
+                <br><br>
+
+                <span data-tooltip="افزودن به لیست عاقمندی ها" data-position="left center">
+					<i class="empty heart large icon i-like"></i>
+				</span>
+            </div><!-- /buttons-->
+
+        </div><!-- /main -->
+        <main-product></main-product><!-- main -->
+
+        <hr class="div-segment"><!-- divider -->
+
+        <div class="notice"><i class="small asterisk icon"></i> {{product.tips}}.</div><!-- notice -->
+
+        <div class="ui stackable three column grid" style="padding: 4% 10px 10px 5px;"><!-- secondery -->
+
+            <introduction-product></introduction-product><!-- Introduction product -->
+
+            <material-product></material-product><!-- Material product -->
+
+            <license-product></license-product><!--License product -->
+
+        </div><!-- /secondery -->
+
+    </div><!-- /product detail segment -->
+</div><!-- /container -->
+<script>
+    $(' .btn-detail .rating')
+        .rating({
+            initialRating: 2,
+            maxRating: 5
+        })
+    ;
+    $(' .read-rating .rating')
+        .rating({
+            initialRating: 2,
+            maxRating: 5
+        })
+    ;
+    $('.read-rating .rating')
+        .rating('disable')
+    ;
+</script>

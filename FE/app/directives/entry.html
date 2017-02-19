@@ -1,0 +1,44 @@
+<div class="ui container">
+    <div class="ui stackable padded grid">
+        <div class="row">
+            <div class="three wide column entry">
+                <div class="ui fluid dropdown button"   
+                     id="entry-select">    
+                    <span class="text">-انتخاب گروه-</span>
+                    <div class="menu"
+                         id="entry-select-menu">
+                        <div class="item" id="entry-select-menu-item">-انتخاب گروه-</div>
+                        <div class="item" id="entry-select-menu-item">گروه یک</div>
+                        <div class="item" id="entry-select-menu-item">گروه دو</div>
+                        <div class="item" id="entry-select-menu-item">گروه سه</div>
+                        <div class="item" id="entry-select-menu-item">گروه چهار</div>
+                        <div class="item" id="entry-select-menu-item">گروه پنج</div>
+                        <div class="item" id="entry-select-menu-item">گروه شش</div>
+                    </div>
+                </div>
+            </div>            
+            <div class="ten wide column entry">
+                <div class="ui fluid action input"
+                     id="entry-input">
+                    <input type="text" placeholder="کالا یا برند مورد نظرتان را جستجو کنید">
+                    <button class="ui icon button">
+                        <i class="search icon"></i>
+                    </button>                        
+                </div>
+            </div>
+            <div class="three wide column entry">
+                <button
+                data-tooltip="{{tooltipMessage}}" 
+                data-position="bottom center"
+                ng-mouseover="hoverTooltip()"
+                class="ui fluid button"
+                id="entry-shop"
+                ui-sref="app.basket">
+                    <span style="position: relative; top: -5px;">سبد خرید</span>
+                    <i class="cart icon" style="position: relative; right: 20px; top: 2px;"></i>
+                    <span style="position: relative;right: -5px; top: -15px;">2</span>
+                </button>
+            </div>                
+        </div><!--  /row  -->
+    </div><!--  /padded grid  -->
+</div><!--  /container  -->

@@ -1,0 +1,16 @@
+<div class="ui container back">
+	<h1>گروه شماره*</h1>
+	<div class="ui grid box">
+		<div class="row"><!-- show categories -->
+			<div class="ui five doubling cards">
+				<div ng-repeat="category in categories"
+					 class="ui card category"><!-- category card --> 
+					<a class="image" href="#">
+						<img src="../images/dairy.jpg" style="border-radius: 0px;">
+						<div class="center aligned content"><h3>{{category.name}}</h3></div>
+					</a>
+				</div><!-- /category card -->
+			</div>
+		</div>
+	</div><!-- /grid box -->
+</div><!--/container-->

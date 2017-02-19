@@ -1,0 +1,24 @@
+{
+  "name": "online_shopping",
+  "version": "0.0.1",
+  "description": "Online shopping - Kish Island",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Shopping",
+    "Online",
+    "Shopping",
+    "Market",
+    "Kish",
+    "Island",
+    "Market"
+  ],
+  "author": "Helen Tazrei, Morteza Zakeri",
+  "license": "ISC",
+  "dependencies": {
+    "semantic-ui": "^2.2.7",
+    "semantic-ui-calendar": "0.0.6"
+  }
+}

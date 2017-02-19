@@ -1,0 +1,68 @@
+<br><br>
+<div class="ui center aligned grid row">
+	<div class="column">
+		<img class="ui small centered image" src="../images/logo.png" alt="">
+	</div>
+</div>
+<entry></entry>
+<br><br><br>
+<!-- ...................show goroups...............-->
+<group-box></group-box>
+<br><br>
+<!-- ...................show categories...............-->
+<card-category></card-category><!-- /category card -->
+<br><br>
+<!-- ...................show products...............-->
+<div class="ui grid container back">
+  <h1>دسته شماره*</h1>
+	<div class="ui grid box">
+		<fltr-btns></fltr-btns> <!-- show filter buttons -->
+  		<div class="ui special cards doubling four column row">
+  			<div class="card c-product"
+  				 ng-repeat="product in products"><!-- card product -->
+  				<div class="content">
+  				 	<div class="ui red ribbon label p-offer" 
+  				 		 ng-if="product.offer==true && product.offer_price>0">پیشنهاد ویژه
+  				 	</div>
+  				 	<span class="right floated">
+  				 		<i class="empty heart icon i-like"></i>
+  				 	</span>
+  				</div>
+  				<div class="blurring dimmable image" id="test">
+  					<div class="ui inverted dimmer">
+  						<div class="content">
+  							<div class="center">
+								<a ui-sref="app.product-detail">
+									<button class="circular ui big icon button btn-hvr"
+											data-tooltip="نمایش کامل" data-position="top center">
+									  <i class="icon search"></i>
+									</button>
+								</a>
+								<button class="circular ui big icon button btn-hvr-shop"
+										data-tooltip="افزودن به سبد خرید" data-position="top center">
+								  <i class="icon shop"></i>
+								</button>
+								<button class="circular ui big icon button btn-hvr"
+										data-tooltip="افزودن به علاقمندی ها" data-position="top center">
+								  <i class="icon heart"></i>
+								</button>
+  							</div>
+  						</div>
+  					</div>
+  					<img src="../images/{{product.icon}}">
+  				</div>
+  				<div class="content n-p">
+  					<br>
+  					<span>{{product.name}}</span>
+  					<hr class="div-p">
+  					<span class="off" 
+  						  ng-if="product.offer_price>0">{{product.price}} تومان
+  					</span>
+  					<span>{{product.offer_price || product.price}} تومان</span>
+  				</div>
+	  			<script src="app/product/jq.js"></script>
+  			</div><!--/card product-->
+  		</div><!--/special cards-->
+	</div><!--box-->
+</div><!--/container-->
+<br><br>
